@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_7_JBirdStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Backgroundsunrise" translatesAutoresizingMaskIntoConstraints="NO" id="LW9-Dl-hBY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="916"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Opening" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADb-g8-QwU">
+                                <rect key="frame" x="132.5" y="64" width="149" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zvq-bT-pi1">
+                                <rect key="frame" x="20" y="606" width="374" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="topButton" backgroundImage="choice1Background">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kyd-32-Wyk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTx-KG-eEX">
+                                <rect key="frame" x="20" y="745" width="374" height="117"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="bottomButton" backgroundImage="choice2Background">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="choiceMade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vm2-kx-opq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ADb-g8-QwU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6yk-hx-3Qk"/>
+                            <constraint firstItem="QTx-KG-eEX" firstAttribute="centerX" secondItem="Zvq-bT-pi1" secondAttribute="centerX" id="H1o-mN-UNn"/>
+                            <constraint firstItem="LW9-Dl-hBY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LcM-k3-H5J"/>
+                            <constraint firstItem="ADb-g8-QwU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YKd-Yl-29p"/>
+                            <constraint firstItem="LW9-Dl-hBY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yjb-kj-Uxm"/>
+                            <constraint firstItem="LW9-Dl-hBY" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="20" symbolic="YES" id="gCX-I6-6q9"/>
+                            <constraint firstItem="LW9-Dl-hBY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="gWW-wH-eeE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="choice1Button" destination="Zvq-bT-pi1" id="twk-dZ-K3B"/>
+                        <outlet property="choice2Button" destination="QTx-KG-eEX" id="F0q-7c-F10"/>
+                        <outlet property="storyText" destination="ADb-g8-QwU" id="LSa-9g-FH8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Backgroundsunrise" width="4256" height="2832"/>
+        <image name="choice1Background" width="1370.5" height="363"/>
+        <image name="choice2Background" width="1370.5" height="363"/>
+    </resources>
+</document>
